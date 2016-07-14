@@ -57,8 +57,8 @@ Arguments bot {ops} / : simpl nomatch.
 Arguments top {ops} / : simpl nomatch.
 
 (** Notations *)
-Infix "<=="  := leq (at level 79): ra_scope.
-Infix "=="   := weq (at level 79): ra_scope.
+Infix "<=="  := leq (at level 70): ra_scope.
+Infix "=="   := weq (at level 70): ra_scope.
 Infix "\cup" := cup (left associativity, at level 50): ra_terms.
 Infix "\cap" := cap (left associativity, at level 40): ra_terms.
 Notation "! x" := (neg x) (right associativity, at level 20): ra_terms.
@@ -578,7 +578,7 @@ Qed.
 
 Definition leq_or_weq (b: bool) := if b then @leq else @weq.
 Arguments leq_or_weq _ {_} (_ _)%ra.
-Notation "x <=[ b ]= y"  := (leq_or_weq b x y) (at level 79): ra_scope.
+Notation "x <=[ b ]= y"  := (leq_or_weq b x y) (at level 70): ra_scope.
 
 Lemma leq_or_weq_weq `{laws} b: Proper (weq ==> weq ==> iff) (leq_or_weq b).
 Proof. unfold leq_or_weq; case b; eauto with typeclass_instances. Qed.

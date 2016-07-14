@@ -47,7 +47,7 @@ Class lower (k k': level) := mk_lower:
   let 'mk_level a' b' c' d' e' f' g' h' := k' in
   is_true (a<<<a'&&& b<<<b' &&& c<<<c' &&& d<<<d' 
            &&& e<<<e' &&& f<<<f' &&& g<<<g' &&& h <<< h').
-Infix "<<" := lower (at level 79): ra_scope.
+Infix "<<" := lower (at level 70): ra_scope.
 Arguments lower _ _: simpl never.
 
 Local Open Scope ra_scope.

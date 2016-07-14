@@ -236,8 +236,8 @@ Delimit Scope ast_scope with ast.
    through monoid.ops) *)
 
 Notation expr_ l s t n m := (expr_ops s t l n m).
-Notation "x <==_[ l ] y" := (@leq (expr_ops _ _ l _ _) x y) (at level 79): ra_scope.
-Notation "x ==_[ l ] y" := (@weq (expr_ops _ _ l _ _) x y) (at level 79): ra_scope.
+Notation "x <==_[ l ] y" := (@leq (expr_ops _ _ l _ _) x y) (at level 70): ra_scope.
+Notation "x ==_[ l ] y" := (@weq (expr_ops _ _ l _ _) x y) (at level 70): ra_scope.
 
 Infix "+" := e_pls: ast_scope.
 Infix "^" := e_cap: ast_scope.
